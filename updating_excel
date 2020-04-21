@@ -1,0 +1,15 @@
+# import the dependencies 
+import pandas as pd
+from openpyxl import load_workbook
+# load in the workbooks
+df=load_workbooks(r'pathway.xlsx')
+df2=load_workbooks(r'pathway2.xlsx')
+sheet 1=df.get_sheet_by_name('sheetname1')
+sheet 2=df2.get_sheet_by_name('sheetname2')
+
+#loop through the new data sheet to select the rows you need to copy
+for i in range(1,sheet2.max_row+1):
+  for j in range(1,sheet2.max_column+1):
+    sheet1.cell(row=i, column=j).value = sheet2.cell(row=i,column=j).value
+
+df.save(r'pathway.xlsx')
