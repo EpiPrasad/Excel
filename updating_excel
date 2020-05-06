@@ -1,4 +1,5 @@
-# import the dependencies 
+# to create a script that updates an existing excel file with new rows with the same columns 
+#import the dependencies 
 import pandas as pd
 from openpyxl import load_workbook
 # load in the workbooks
